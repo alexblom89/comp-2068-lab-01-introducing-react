@@ -4,7 +4,7 @@ import Greeting from './components/Greeting';
 import './App.css';
 
 const App = () => {
-  const [name, setName] = useState({});
+  const [name, setName] = useState([]);
 
   return (
       <div className="container">
@@ -12,6 +12,7 @@ const App = () => {
             <input
               onChange={({target: {value}}) => setName(value)}
               placeholder="Enter your name"
+              className="input"
             />
             <Greeting name={name}/>
           </>
